@@ -1,47 +1,45 @@
 {
   "personalInfo": {
-    "name": "نام شما",
+    "name": "عرفان مجرب",
     "title": "توسعه‌دهنده وب | مهندس نرم‌افزار",
     "profilePicture": "https://placehold.co/400x400/EFEFEF/333?text=Your+Photo",
-    "email": "your.email@example.com",
-    "phone": "09123456789",
+    "email": "ٍErfmoj092@proton.me",
+    "phone": "09382467234",
     "linkedin": "https://linkedin.com/in/yourprofile",
-    "github": "https://github.com/yourusername",
-    "telegram": "https://t.me/yourusername",
-    "website": "https://your-portfolio.com",
-    "summary": "یک توسعه‌دهنده خلاق و با انگیزه با ۳ سال تجربه در ساخت وب‌اپلیکیشن‌های واکنش‌گرا و کاربرپسند. علاقه‌مند به یادگیری تکنولوژی‌های جدید و کار در محیط‌های چالش‌برانگیز."
+    "github": "https://github.com/Erfmoj",
+    "telegram": "https://t.me/Erfmoj",
+    "website": "coming soon",
+    "summary": "دانشجو و محصل با سابقه کاری طولانی در مشاغل متفاوت علاقه مند به کامپیوتر و تکنولوژی "
   },
   "experience": [
     {
-      "title": "توسعه‌دهنده ارشد فرانت‌اند",
-      "company": "شرکت فناوری نوین",
-      "period": "فروردین ۱۳۹۹ - تا امروز",
-      "description": "توسعه و نگهداری رابط کاربری پلتفرم اصلی شرکت با استفاده از React و TypeScript. همکاری نزدیک با تیم محصول برای طراحی ویژگی‌های جدید و بهبود پرفرمنس صفحات به میزان ۴۰٪."
+      "title": "ناظر شبکه",
+      "company": "یافتار پژوهان",
+      "period": "تیر 401 تا آذر 402",
+      "description": "مرحله اول از بازنگری پکت های وب توسط wireshark و بررسی احتمال نفوذ"
     },
     {
       "title": "توسعه‌دهنده وب",
-      "company": "استارتاپ راه ابریشم",
-      "period": "خرداد ۱۳۹۷ - اسفند ۱۳۹۸",
-      "description": "طراحی و پیاده‌سازی لندینگ‌پیج‌ها و داشبوردهای مدیریتی با استفاده از HTML, CSS و Vue.js. مسئولیت کامل چرخه توسعه از طراحی اولیه تا استقرار نهایی."
+      "company": "آزاد",
+      "period": "تیر 403 تا این لحظه",
+      "description": "راه اندازی چند منو کافه به صورت لوکال هاست و انجام پروژه های دانشچویی و ساخت ارائه به صورت HTML5."
     }
   ],
   "education": [
     {
-      "degree": "کارشناسی مهندسی کامپیوتر",
-      "university": "دانشگاه تهران",
-      "period": "۱۳۹۳ - ۱۳۹۷"
+      "degree": "کارشناسی مهندسی نساجی",
+      "university": "دانشگاه صنعتی امیرکبیر (پلی تکنیک تهران)",
+      "period": "1399-1403"
     }
   ],
   "skills": [
-    "JavaScript (ES6+)",
+    "Linux(Ubuntu)",
     "TypeScript",
-    "React.js & Redux",
-    "Vue.js",
-    "Node.js",
-    "HTML5 & CSS3 (Sass)",
+    "Python",
+    "Java",
+    "HTML5 & CSS3 ",
     "Git & GitHub",
     "Webpack",
-    "RESTful APIs",
-    "Agile/Scrum"
+    "AI",
   ]
 }
