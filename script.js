@@ -72,10 +72,10 @@ function populateResume(data) {
     for (const category in data.skills) {
         if (Object.prototype.hasOwnProperty.call(data.skills, category) && data.skills[category].length > 0) {
             
-            // ایجاد عنوان برای دسته‌بندی (مثلاً: "Programming Languages")
+            // ایجاد عنوان برای دسته‌بندی
             const categoryTitle = document.createElement('h4');
             categoryTitle.textContent = category;
-            skillsList.appendChild(categoryTitle); // اضافه کردن h4 به div (اکنون معتبر است)
+            skillsList.appendChild(categoryTitle); // اضافه کردن h4 به DIV
 
             // تکرار بر روی مهارت‌های داخل هر دسته‌بندی
             data.skills[category].forEach(skill => {
