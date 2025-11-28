@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const resumeDataUrl = 'resume.json';
+    // از آدرس نسبی استفاده می‌کنیم
+    const resumeDataUrl = 'resume.json'; 
 
     fetch(resumeDataUrl)
         .then(response => {
             if (!response.ok) {
+                // اگر فایل JSON پیدا نشد، خطا نمایش داده می‌شود
                 throw new Error('Network response was not ok ' + response.statusText);
             }
             return response.json();
@@ -51,7 +53,8 @@ function populateResume(data) {
     ];
 
     socialLinks.forEach(link => {
-        if (info[link.key]) {
+        // این بخش چک می‌کند که آیا مقدار 'website' برابر با null است یا نه
+        if (info[link.key] && info[link.key] !== null) { 
             socialIconsHTML += `<a href="${info[link.key]}" target="_blank" rel="noopener noreferrer" title="${link.title}"><i class="${link.icon}"></i></a>`;
         }
     });
@@ -63,14 +66,27 @@ function populateResume(data) {
     // ۳. قرار دادن HTML نهایی در صفحه
     contactInfoDiv.innerHTML = contactHTML;
     
-    // --- پر کردن مهارت‌ها ---
+    // --- پر کردن مهارت‌ها (با پشتیبانی از دسته‌بندی) ---
     const skillsList = document.getElementById('skills-list');
     skillsList.innerHTML = ''; 
-    data.skills.forEach(skill => {
-        const listItem = document.createElement('li');
-        listItem.textContent = skill;
-        skillsList.appendChild(listItem);
-    });
+
+    // تکرار بر روی کلیدهای شیء skills (یعنی دسته‌بندی‌ها)
+    for (const category in data.skills) {
+        if (Object.prototype.hasOwnProperty.call(data.skills, category) && data.skills[category].length > 0) {
+            
+            // ایجاد عنوان برای دسته‌بندی (مثلاً: "Programming Languages")
+            const categoryTitle = document.createElement('h4');
+            categoryTitle.textContent = category;
+            skillsList.appendChild(categoryTitle);
+
+            // تکرار بر روی مهارت‌های داخل هر دسته‌بندی
+            data.skills[category].forEach(skill => {
+                const listItem = document.createElement('li');
+                listItem.textContent = skill;
+                skillsList.appendChild(listItem);
+            });
+        }
+    }
 
     // --- پر کردن ستون راست ---
     document.getElementById('summary').textContent = info.summary;
