@@ -5,11 +5,11 @@
     "profilePicture": "images/profile.jpg",
     "email": "Erfmoj092@proton.me",
     "phone": "09382467234",
-    "linkedin": "www.linkedin.com/in/erfan-mojarrab",
+    "linkedin": "https://www.linkedin.com/in/erfan-mojarrab",
     "github": "https://github.com/Erfmoj",
     "telegram": "https://t.me/Erfmoj",
     "website": null,
-    "summary": "دانشجو و محصل با سابقه کاری طولانی در مشاغل متفاوت علاقه مند به کامپیوتر و تکنولوژی "
+    "summary": "دانشجو و محصل با سابقه کاری طولانی در مشاغل متفاوت علاقه مند به کامپیوتر و تکنولوژی."
   },
   "experience": [
     {
@@ -32,10 +32,10 @@
       "period": "1399-1403"
     }
   ],
-"skills": { // تبدیل به یک شیء برای دسته‌بندی
+  "skills": { 
     "Programming Languages": ["TypeScript", "Python", "Java"],
-    "Web Technologies": ["HTML5 & CSS3", "JavaScript", "React/Next.js (اگر بلدید)"],
-    "Tools & Platforms": ["Git & GitHub", "Linux(Ubuntu)", "Webpack", "Wireshark"],
+    "Web Technologies": ["HTML5 & CSS3", "JavaScript", "Webpack"],
+    "Tools & Platforms": ["Git & GitHub", "Linux(Ubuntu)", "Wireshark"],
     "Concepts": ["AI (هوش مصنوعی)", "Networking Basics"]
-  },
+  }
 }
