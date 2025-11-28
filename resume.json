@@ -8,7 +8,7 @@
     "linkedin": "www.linkedin.com/in/erfan-mojarrab",
     "github": "https://github.com/Erfmoj",
     "telegram": "https://t.me/Erfmoj",
-    "website": "coming soon",
+    "website": null,
     "summary": "دانشجو و محصل با سابقه کاری طولانی در مشاغل متفاوت علاقه مند به کامپیوتر و تکنولوژی "
   },
   "experience": [
@@ -32,14 +32,10 @@
       "period": "1399-1403"
     }
   ],
-  "skills": [
-    "Linux(Ubuntu)",
-    "TypeScript",
-    "Python",
-    "Java",
-    "HTML5 & CSS3 ",
-    "Git & GitHub",
-    "Webpack",
-    "AI"
-  ]
+"skills": { // تبدیل به یک شیء برای دسته‌بندی
+    "Programming Languages": ["TypeScript", "Python", "Java"],
+    "Web Technologies": ["HTML5 & CSS3", "JavaScript", "React/Next.js (اگر بلدید)"],
+    "Tools & Platforms": ["Git & GitHub", "Linux(Ubuntu)", "Webpack", "Wireshark"],
+    "Concepts": ["AI (هوش مصنوعی)", "Networking Basics"]
+  },
 }
