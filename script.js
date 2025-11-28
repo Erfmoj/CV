@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // از آدرس نسبی استفاده می‌کنیم
     const resumeDataUrl = 'resume.json'; 
 
     fetch(resumeDataUrl)
@@ -53,7 +52,6 @@ function populateResume(data) {
     ];
 
     socialLinks.forEach(link => {
-        // این بخش چک می‌کند که آیا مقدار 'website' برابر با null است یا نه
         if (info[link.key] && info[link.key] !== null) { 
             socialIconsHTML += `<a href="${info[link.key]}" target="_blank" rel="noopener noreferrer" title="${link.title}"><i class="${link.icon}"></i></a>`;
         }
@@ -77,11 +75,11 @@ function populateResume(data) {
             // ایجاد عنوان برای دسته‌بندی (مثلاً: "Programming Languages")
             const categoryTitle = document.createElement('h4');
             categoryTitle.textContent = category;
-            skillsList.appendChild(categoryTitle);
+            skillsList.appendChild(categoryTitle); // اضافه کردن h4 به div (اکنون معتبر است)
 
             // تکرار بر روی مهارت‌های داخل هر دسته‌بندی
             data.skills[category].forEach(skill => {
-                const listItem = document.createElement('li');
+                const listItem = document.createElement('li'); // آیتم‌ها همچنان <li> هستند
                 listItem.textContent = skill;
                 skillsList.appendChild(listItem);
             });
