@@ -10,8 +10,8 @@
 
     <style>
         :root {
-            --primary-color: #1a1a1a; /* Black */
-            --secondary-color: #f1c40f; /* Yellow */
+            --primary-color: #1a1a1a;
+            --secondary-color: #f1c40f;
             --background-color: #f8f9fa;
             --container-bg-color: #ffffff;
             --text-color: #333333;
@@ -113,3 +113,91 @@
         .skills-section h3, .contact-section h3 {
             color: #fff;
             border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            width: 100%;
+        }
+
+        /* استایل‌های بخش مهارت‌ها (با استفاده از DIV) */
+        #skills-list {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center; 
+        }
+        #skills-list h4 {
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            margin: 15px 0 5px;
+            font-weight: 500;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+            padding-bottom: 5px;
+        }
+        #skills-list li { 
+            list-style: none;
+            background: rgba(255, 255, 255, 0.15); 
+            padding: 6px 14px; 
+            margin: 5px; 
+            border-radius: 20px; 
+            font-size: 0.9em; 
+            font-weight: 400; 
+        }
+        
+        /* --- Right Column --- */
+        .right-column { padding: 50px; width: 65%; }
+        .right-column h3 { color: var(--primary-color); font-size: 1.6em; font-weight: 700; border-bottom: 3px solid var(--border-color); padding-bottom: 10px; margin-bottom: 25px; }
+        .summary-section p { font-size: 1.05em; }
+        .job, .education-item { margin-bottom: 30px; }
+        h4 { margin: 0 0 5px; color: #555; font-size: 1.2em; font-weight: 500; }
+        .company { font-weight: 700; color: #000; }
+        .period { font-size: 0.9em; color: var(--light-text-color); margin-bottom: 10px; }
+        .job p, .education-item p { margin: 0; }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container { flex-direction: column; margin: 0; border-radius: 0; }
+            .left-column, .right-column { width: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="left-column">
+            <div class="profile-pic-container">
+                <img id="profile-pic" src="" alt="عکس پروفایل">
+            </div>
+            <h1 id="name"></h1>
+            <h2 id="title"></h2>
+            
+            <section class="contact-section">
+                <h3>اطلاعات تماس</h3>
+                <div id="contact-info">
+                    </div>
+            </section>
+            
+            <section class="skills-section">
+                <h3>مهارت‌ها</h3>
+                <div id="skills-list"></div>
+            </section>
+        </aside>
+
+        <main class="right-column">
+            <section class="summary-section">
+                <h3>درباره من</h3>
+                <p id="summary"></p>
+            </section>
+            <section id="experience-section">
+                <h3>سوابق شغلی</h3>
+            </section>
+            <section id="education-section">
+                <h3>تحصیلات</h3>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
