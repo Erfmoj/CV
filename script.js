@@ -23,7 +23,7 @@ function populateResume(data) {
     
     // --- پر کردن ستون چپ ---
     document.title = `رزومه - ${info.name}`;
-    document.getElementById('profile-pic').src = info.profilePicture;
+   // document.getElementById('profile-pic').src = info.profilePicture;
     document.getElementById('profile-pic').onerror = function() { 
         this.src = 'https://placehold.co/400x400/EFEFEF/333?text=Image+Not+Found';
     };
