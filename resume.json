@@ -36,6 +36,7 @@
     "Programming Languages": ["TypeScript", "Python", "Java"],
     "Web Technologies": ["HTML5 & CSS3", "JavaScript", "Webpack"],
     "Tools & Platforms": ["Git & GitHub", "Linux(Ubuntu)", "Wireshark"],
-    "Concepts": ["AI (هوش مصنوعی)", "Networking Basics"]
+    "Concepts": ["AI (هوش مصنوعی)", "Networking Basics"],
+    "Languages": ["English (Intermediate to Advanced)"] 
   }
 }
