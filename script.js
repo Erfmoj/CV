@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(resumeDataUrl)
         .then(response => {
             if (!response.ok) {
-                // اگر فایل JSON پیدا نشد، خطا نمایش داده می‌شود
                 throw new Error('Network response was not ok ' + response.statusText);
             }
             return response.json();
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function populateResume(data) {
     const info = data.personalInfo;
     
-    // --- پر کردن ستون چپ ---
+
     document.title = `رزومه - ${info.name}`;
     document.getElementById('profile-pic').src = info.profilePicture;
     document.getElementById('profile-pic').onerror = function() { 
@@ -30,11 +29,11 @@ function populateResume(data) {
     document.getElementById('name').textContent = info.name;
     document.getElementById('title').textContent = info.title;
 
-    // --- بازنویسی کامل بخش اطلاعات تماس ---
+ 
     const contactInfoDiv = document.getElementById('contact-info');
     let contactHTML = '';
 
-    // ۱. اضافه کردن اطلاعات قابل کپی (ایمیل و تلفن)
+
     if (info.email) {
         contactHTML += `<p><i class="fas fa-envelope"></i><span>${info.email}</span></p>`;
     }
@@ -42,7 +41,6 @@ function populateResume(data) {
         contactHTML += `<p><i class="fas fa-phone"></i><span>${info.phone}</span></p>`;
     }
 
-    // ۲. اضافه کردن آیکون‌های شبکه‌های اجتماعی
     let socialIconsHTML = '';
     const socialLinks = [
         { key: 'linkedin', icon: 'fab fa-linkedin', title: 'لینکدین' },
@@ -61,32 +59,28 @@ function populateResume(data) {
         contactHTML += `<div class="social-icons">${socialIconsHTML}</div>`;
     }
 
-    // ۳. قرار دادن HTML نهایی در صفحه
     contactInfoDiv.innerHTML = contactHTML;
     
-    // --- پر کردن مهارت‌ها (با پشتیبانی از دسته‌بندی) ---
+
     const skillsList = document.getElementById('skills-list');
     skillsList.innerHTML = ''; 
 
-    // تکرار بر روی کلیدهای شیء skills (یعنی دسته‌بندی‌ها)
     for (const category in data.skills) {
         if (Object.prototype.hasOwnProperty.call(data.skills, category) && data.skills[category].length > 0) {
-            
-            // ایجاد عنوان برای دسته‌بندی
+
             const categoryTitle = document.createElement('h4');
             categoryTitle.textContent = category;
-            skillsList.appendChild(categoryTitle); // اضافه کردن h4 به DIV
+            skillsList.appendChild(categoryTitle); 
 
-            // تکرار بر روی مهارت‌های داخل هر دسته‌بندی
             data.skills[category].forEach(skill => {
-                const listItem = document.createElement('li'); // آیتم‌ها همچنان <li> هستند
+                const listItem = document.createElement('li');
                 listItem.textContent = skill;
                 skillsList.appendChild(listItem);
             });
         }
     }
 
-    // --- پر کردن ستون راست ---
+
     document.getElementById('summary').textContent = info.summary;
 
     const experienceSection = document.getElementById('experience-section');
